@@ -20,7 +20,7 @@ export default function Home({ products }) {
           }}>
             {product.image && (
               <img 
-                src={product.image} 
+                src={product.image.startsWith('/') ? product.image : '/' + product.image} 
                 alt={product.title} 
                 style={{ width: '100%', height: '200px', objectFit: 'cover', borderRadius: '4px' }}
               />
